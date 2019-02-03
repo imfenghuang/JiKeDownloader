@@ -1,7 +1,6 @@
 # coding=utf-8
-import requests, json, re, os, sys, time
+import requests, json
 from urllib.parse import urlparse
-from contextlib import closing
 from bs4 import BeautifulSoup
 from ffmpy import FFmpeg
 
