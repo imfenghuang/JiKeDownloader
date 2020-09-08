@@ -47,7 +47,7 @@ class JiKeDownloader(object):
     def downLoader(self,url):
         url_parse = urlparse(url)
         url_id = url_parse.path.split('/')[2];
-        m3u8_url = "https://app.jike.ruguoapp.com/1.0/mediaMeta/play?type=ORIGINAL_POST&id="+url_id
+        m3u8_url = "https://api.ruguoapp.com/1.0/mediaMeta/play?type=ORIGINAL_POST&id="+url_id  #2020-09-08
         ret = requests.get(m3u8_url, headers=self.headers)
         bf = BeautifulSoup(ret.text, 'lxml')
         json_url = json.loads(bf.p.string)
